@@ -5,6 +5,14 @@
 /* font-family: "Pretendard Variable", sans-serif; */
 /* Prata */
 /* font-family: "Prata", serif; */
+/* Fredoka */
+/* font-family: "Fredoka", sans-serif; */
+
+/* 컬러 */
+/* 초록색 */
+/* #9aff01 */
+/* 분홍색 */
+/* #CD72FC */
 
 /* 초기화 */
 * {
@@ -17,16 +25,19 @@ li {
 }
 
 html {
+  /* rem 단위의 기준 */
   font-size: 10px;
   /* 스크롤 부드럽게 */
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Fredoka One', Fredoka One;
+  font-family:
+    'Fredoka One',
+    Fredoka One;
   font-size: 1.6rem;
   line-height: 1.6;
   background-color: #101010;
-  color: #9AFF01;
+  color: #9aff01;
 }
 /*img, iframe{vertical-align: top;}*/
 img,
@@ -38,8 +49,7 @@ iframe {
   margin: 0px auto;
 }
 a {
-  font-family: 'Beth Ellen', Beth Ellen;
-  color: #9AFF01;
+  color: #9aff01;
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 300;
@@ -48,9 +58,8 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: #9AFF01;
+  color: #9aff01;
 }
-
 
 /* header */
 header {
@@ -61,6 +70,9 @@ header {
   width: 100%;
   background-color: #333;
   border-bottom: 1px solid #ccc;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.6rem; /* 폰트 크기 1rem(10px) */
+  letter-spacing: 1px; /* 자간 */
 }
 .header-inner {
   display: flex;
@@ -82,11 +94,13 @@ header {
   margin-left: 40px;
 }
 .section-title {
-  font-family: 'Prata', serif;
-  font-size: 4rem;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 5.5rem;
   font-weight: 800;
   margin-bottom: 80px;
   text-align: center;
+  -webkit-text-stroke: 1px #000;
+  text-shadow: 10px 0 0 #cd72fc; /* 가로, 세로, 블러, 컬러 */
 }
 .section-sub-title {
   font-family: 'Prata', serif;
@@ -141,6 +155,7 @@ header {
 .ab-text-wrap > h4 {
   font-size: 3.6rem;
   font-weight: 700;
+  letter-spacing: 100px;
 }
 .ab-text-wrap h5 {
   font-size: 2rem;
