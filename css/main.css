@@ -61,16 +61,16 @@ body h4-1 {
   letter-spacing: 7px;
 }
 
-body h5 {
+body h5-1 {
   font-family:
     'Fredoka One',
     Fredoka One;
   font-size: 2rem;
-  line-height: 1.6;
+  line-height: 1;
   background-color: #101010;
   color: #ffffff;
   letter-spacing: 7px;
-  padding: 50px 0px;
+  padding: px 0px;
 }
 /*img, iframe{vertical-align: top;}*/
 img,
@@ -130,7 +130,8 @@ header {
   font-family: 'Fredoka', sans-serif;
   font-size: 5.5rem;
   font-weight: 800;
-  margin-bottom: 80px;
+  margin-bottom: 200px;
+  margin-top: 400px;
   text-align: center;
   -webkit-text-stroke: 1px #000;
   text-shadow: 10px 0 0 #cd72fc; /* 가로, 세로, 블러, 컬러 */
@@ -221,7 +222,6 @@ header {
   font-weight: 700;
   margin-bottom: 32px;
 }*/
-
 #skill h6 > strong {
   display: block;
   font-size: 2rem;
@@ -231,6 +231,11 @@ header {
 #skill ul {
   font-size: 2rem;
   font-weight: 300;
+}
+#skill ul > li > ul > li {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #CD72FC;
 }
 #skill img {
   margin-bottom: 30px;
@@ -258,24 +263,27 @@ header {
   display: flex;
 }
 .card-detail .long-btns > a {
-  color: #212121;
+  color: #9aff01;
   font-size: 1.8rem;
   font-weight: bold;
   display: block;
-  line-height: 38px;
-  border: 1px solid 
-  #516768;
+  line-height: 35px;
+  /* border: 1px solid 
+  #9aff01; */
+  background-color: #000000;
   padding: 0px 25px;
   border-radius: 32px;
-  font-style: italic;
+  font-family: 'Fredoka', sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 2px 0 0 #cd72fc; /* 가로, 세로, 블러, 컬러 */
 }
 .card-detail .long-btns > a:first-child {
   margin-right: 20px;
 }
 .card-detail .long-btns > a:hover,
 .card-detail .long-btns > a:focus {
-  background-color: #fff;
-  color: #333;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* 카드형 슬라이더 */
@@ -656,7 +664,7 @@ button {
 /* contact-pc */
 #contact {
   font-family: "Fredoka", sans-serif;
-  margin: 300px 0px;
+  margin: 100px 0px;
   color: #9aff01;
 }
 
