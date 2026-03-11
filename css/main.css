@@ -31,47 +31,13 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family:
-    'Fredoka One',
-    Fredoka One;
+  font-family: 'Fredoka', sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
   background-color: #101010;
   color: #9aff01;
 }
 
-body h4, h5 {
-    'Fredoka One',
-    Fredoka One;
-  font-size: 1.6rem;
-  line-height: 1.6;
-  background-color: #101010;
-  color: #ffffff;
-  margin-bottom: 5px;
-}
-
-body h4-1 {
-  font-family:
-    'Fredoka One',
-    Fredoka One;
-  font-size: 3rem;
-  line-height: 1.6;
-  background-color: #101010;
-  color: #ffffff;
-  letter-spacing: 7px;
-}
-
-body h5-1 {
-  font-family:
-    'Fredoka One',
-    Fredoka One;
-  font-size: 2rem;
-  line-height: 1;
-  background-color: #101010;
-  color: #ffffff;
-  letter-spacing: 7px;
-  padding: px 0px;
-}
 /*img, iframe{vertical-align: top;}*/
 img,
 iframe {
@@ -127,15 +93,44 @@ header {
   margin-left: 40px;
 }
 .section-title {
+  position: relative;
   font-family: 'Fredoka', sans-serif;
   font-size: 5.5rem;
   font-weight: 800;
-  margin-bottom: 200px;
-  margin-top: 400px;
+  margin-bottom: 80px;
   text-align: center;
-  -webkit-text-stroke: 1px #000;
-  text-shadow: 10px 0 0 #cd72fc; /* 가로, 세로, 블러, 컬러 */
+  color: #9aff01; /* 글자 내부 색상 */
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* 상하좌우로 그림자를 찍어 외곽을 메움 */
 }
+
+.about-title {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-title::after {
+  content: 'ABOUT ME';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #cd72fc;
+  z-index: -1;
+}
+
+.skill-title::after {
+  content: 'SKILL';
+  position: absolute;
+  top: 0;
+  left: 540px;
+  color: #cd72fc;
+  z-index: -1;
+}
+
 .section-sub-title {
   font-family: 'Prata', serif;
   font-size: 3rem;
@@ -185,28 +180,45 @@ header {
   flex-direction: column;
   justify-content: center;
   padding-left: 10rem;
+  color: #fff;
 }
 .ab-text-wrap > h4 {
+  color: #fff;
   font-size: 3rem;
   font-weight: 500;
   letter-spacing: 100px;
   margin-top: 30px;
 }
-.ab-text-wrap > h4-1 {
-  font-size: 2.8rem;
-  font-weight: 250;
+.ab-text-wrap > h5 {
+  font-size: 2rem;
 }
-.ab-text-wrap h5 {
-  font-size: rem;
+.ab-text-wrap .info {
+  font-family: 'Pretendard Variable', sans-serif;
+  display: flex;
+  font-size: 2rem;
   font-weight: 500;
   margin-top: 15px;
+  /* 이름,생년월일 밑 여백 조절 */
+  margin-bottom: 30px;
   letter-spacing: 7px;
+  gap: 100px;
 }
-.ab-text-wrap h5-1 {
-  font-size: 1.1rem;
-  font-weight: 0;
-  letter-spacing: 7px;
-  color:#fff
+
+.ab-text-wrap .info h5 {
+  font-size: 20px;
+}
+
+.ab-text-wrap ul {
+  margin-top: 10px;
+}
+/* 학력사항 항목 행간 조절 */
+.ab-text-wrap ul li {
+  font-family: 'Pretendard Variable', sans-serif;
+  line-height: 2.6rem;
+}
+/* 학력사항 날짜 오른쪽 여백 조절 */
+.ab-text-wrap ul li .date {
+  margin-right: 10px;
 }
 
 /* skill */
@@ -235,7 +247,7 @@ header {
 #skill ul > li > ul > li {
   font-size: 2rem;
   font-weight: 300;
-  color: #CD72FC;
+  color: #cd72fc;
 }
 #skill img {
   margin-bottom: 30px;
@@ -663,7 +675,7 @@ button {
 
 /* contact-pc */
 #contact {
-  font-family: "Fredoka", sans-serif;
+  font-family: 'Fredoka', sans-serif;
   margin: 100px 0px;
   color: #9aff01;
 }
@@ -675,17 +687,24 @@ button {
   padding: 100px 0;
 }
 
-#contact .contact-list > li > h7 {
+#contact .contact-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .contact-list > li .contact-title {
   display: flex;
   padding: 30px 9px;
   font-size: x-large;
   letter-spacing: 1.5px;
 }
 
-#contact .contact-list > li > h8 {
+#contact .contact-list > li p:last-child {
   display: flex;
   gap: 0px;
-  color: #CD72FC;
+  color: #cd72fc;
   padding: 0px 0px;
   letter-spacing: 1.5px;
 }
@@ -696,7 +715,7 @@ footer {
   text-align: center;
   padding: 40px;
   background-color: #000;
-   letter-spacing: 1px; /* 자간 */
+  letter-spacing: 1px; /* 자간 */
 }
 
 /* 특정 스크롤 값에서 맨위로가기 버튼이 보였다 안보였다 설정 디자인 */
@@ -1041,7 +1060,6 @@ footer {
     padding: 5px 0;
   }
   footer {
-
     padding: 16px;
   }
   .btn-top {
