@@ -100,7 +100,7 @@ header {
   margin-bottom: 80px;
   text-align: center;
   color: #9aff01; /* 글자 내부 색상 */
-  text-shadow: 4px 0px 0px #CD72FC;
+  text-shadow: 5px 0px 0px #CD72FC;
 }
 
 .about-title {
