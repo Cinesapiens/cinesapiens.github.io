@@ -742,11 +742,12 @@ footer {
     padding: 0;
   }
   .gnb > a {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-left: 10px;
   }
   .logo {
-    width: 100px;
+    width: 85px;
+    margin-top: 5px
   }
 
   #main-visual > video {
@@ -821,7 +822,10 @@ footer {
   #skill h4 > strong {
     font-size: 2.2rem;
   }
-  #skill > ul {
+  #skill h5 {
+    flex-wrap: wrap;
+  }
+  #skill ul {
     flex-wrap: wrap;
   }
   #skill > ul > li {
@@ -949,7 +953,7 @@ footer {
     padding: 20px;
   }
   #contact .contact-list li {
-    padding: 5px 0;
+    padding: 50px 0;
   }
   footer {
     padding: 16px;
@@ -958,4 +962,8 @@ footer {
     right: 20px;
     bottom: 60px;
   }
+  html, body {
+max-width: 100%;
+overflow-x: hidden;
+}
 } /* mobile End */
