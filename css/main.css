@@ -34,7 +34,7 @@ body {
   font-family: 'Fredoka', sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
-  background-color: #101010;
+  background-color: #010101;
   color: #9aff01;
 }
 
@@ -100,7 +100,13 @@ header {
   margin-bottom: 80px;
   text-align: center;
   color: #9aff01; /* 글자 내부 색상 */
-  text-shadow: 5px 0px 0px #CD72FC;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black,
+    5px 0px 0px #cd72fc;
+  /* text-shadow: 5px 0px 0px #cd72fc; */
 }
 
 .about-title {
@@ -229,6 +235,9 @@ header {
   font-weight: 300;
 }
 #skill ul > li > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: 'Pretendard Variable', sans-serif;
   font-size: 2rem;
   font-weight: 300;
@@ -747,7 +756,7 @@ footer {
   }
   .logo {
     width: 85px;
-    margin-top: 5px
+    margin-top: 5px;
   }
 
   #main-visual > video {
@@ -831,9 +840,16 @@ footer {
   #skill > ul > li {
     width: 50%;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   #skill > ul > li:last-child {
     margin-bottom: 0px;
+  }
+  #skill > ul > li img {
+    width: 80px;
   }
 
   /* slider-mobile */
@@ -953,7 +969,14 @@ footer {
     padding: 20px;
   }
   #contact .contact-list li {
-    padding: 50px 0;
+    padding: 20px 0;
+  }
+  #contact .contact-list li img {
+    width: 80px;
+  }
+  #contact .contact-list > li .contact-title {
+    padding: 0;
+    padding-top: 10px;
   }
   footer {
     padding: 16px;
@@ -962,8 +985,9 @@ footer {
     right: 20px;
     bottom: 60px;
   }
-  html, body {
-max-width: 100%;
-overflow-x: hidden;
-}
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 } /* mobile End */
