@@ -82,10 +82,10 @@ header {
 .logo {
   align-self: center;
   /* 로고 너비 지정 */
-  width: 65px;
+  width: 180px;
 }
 
-.logo > a > img {
+.logo > img {
   width: 100%;
 }
 
@@ -100,35 +100,13 @@ header {
   margin-bottom: 80px;
   text-align: center;
   color: #9aff01; /* 글자 내부 색상 */
-  text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black; /* 상하좌우로 그림자를 찍어 외곽을 메움 */
+  text-shadow: 4px 0px 0px #CD72FC;
 }
 
 .about-title {
   display: flex;
   justify-content: center;
   flex-shrink: 0;
-}
-
-.about-title::after {
-  content: 'ABOUT ME';
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #cd72fc;
-  z-index: -1;
-}
-
-.skill-title::after {
-  content: 'SKILL';
-  position: absolute;
-  top: 0;
-  left: 540px;
-  color: #cd72fc;
-  z-index: -1;
 }
 
 .section-sub-title {
@@ -173,20 +151,20 @@ header {
   aspect-ratio: 1/1;
   object-fit: cover;
   /* 사진을 원형으로 만들기 위한 코드, 사각형으로 하려면 삭제 */
-  border-radius: 50%;
+  border-radius: 60%;
 }
 .ab-text-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 10rem;
-  color: #fff;
+  color: #ffffff;
 }
 .ab-text-wrap > h4 {
-  color: #fff;
+  color: #ffffff;
   font-size: 3rem;
   font-weight: 500;
-  letter-spacing: 100px;
+  letter-spacing: 80px;
   margin-top: 30px;
 }
 .ab-text-wrap > h5 {
@@ -208,6 +186,11 @@ header {
   font-size: 20px;
 }
 
+.ab-text-wrap h5 {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
 .ab-text-wrap ul {
   margin-top: 10px;
 }
@@ -223,7 +206,7 @@ header {
 
 /* skill */
 #skill {
-  margin: 160px auto;
+  margin: 250px auto;
 }
 #skill > ul {
   display: flex;
@@ -238,6 +221,7 @@ header {
   display: block;
   font-size: 2rem;
   font-weight: 700;
+  margin-top: 70px;
   margin-bottom: 30px;
 }
 #skill ul {
@@ -245,6 +229,7 @@ header {
   font-weight: 300;
 }
 #skill ul > li > ul > li {
+  font-family: 'Pretendard Variable', sans-serif;
   font-size: 2rem;
   font-weight: 300;
   color: #cd72fc;
@@ -258,12 +243,15 @@ header {
   width: 100%;
 }
 .card-detail {
+  font-family: 'Pretendard Variable', sans-serif;
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
 .card-detail > h5 {
-  font-size: 3rem;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
 }
 .card-detail > ul {
   margin: 20px 0;
@@ -287,7 +275,7 @@ header {
   border-radius: 32px;
   font-family: 'Fredoka', sans-serif;
   letter-spacing: 5px;
-  text-shadow: 2px 0 0 #cd72fc; /* 가로, 세로, 블러, 컬러 */
+  text-shadow: 3px 0 0 #cd72fc; /* 가로, 세로, 블러, 컬러 */
 }
 .card-detail .long-btns > a:first-child {
   margin-right: 20px;
@@ -409,132 +397,6 @@ header {
 button {
   padding: 10px 20px;
   cursor: pointer;
-}
-
-/* img-slider */
-.img-slider-wrap {
-  width: 60%;
-  display: flex;
-  gap: 30px;
-  margin: 0 auto;
-  margin-bottom: 150px;
-}
-.img-slider {
-  width: 400px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  background: #fff;
-  border: 1px solid #dbdbdb;
-  border-radius: 8px;
-}
-
-.img-slider-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-.img-description {
-  width: 400px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.img-description > h6 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-.img-description > ul > li {
-  margin: 15px 0;
-}
-.img-description > ul > li > p {
-  font-size: 1.75rem;
-}
-
-/* page */
-.page {
-  min-width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.page img {
-  width: 100%;
-  display: block;
-}
-
-.caption {
-  padding: 15px;
-  font-size: 1.4rem;
-  font-weight: 500;
-}
-
-/* 좌우 네비게이션 버튼 공통 스타일 */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 50%;
-
-  /* 크기 고정 */
-  width: 30px !important;
-  height: 30px !important;
-  min-width: 30px;
-
-  cursor: pointer;
-  z-index: 10;
-
-  display: flex;
-  align-items: center; /* 수직 중앙 */
-  justify-content: center; /* 수평 중앙 */
-
-  padding: 0;
-  margin: 0;
-  color: #333;
-  flex-shrink: 0; /* 버튼이 찌그러지는 것 방지 */
-}
-.slider-btn > img {
-  width: 40%;
-}
-/* 각 버튼의 가로 위치 */
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-/* 버튼이 숨겨질 때 사용할 클래스 */
-.hidden {
-  opacity: 0;
-  pointer-events: none; /* 클릭 안되게 설정 */
-}
-
-.img-indicator {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  padding: 0;
-  z-index: 10;
-}
-
-.img-indicator .dot {
-  width: 6px;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.img-indicator .dot.active {
-  background: #fff;
 }
 
 /* shorts-pc */
@@ -694,6 +556,10 @@ button {
   align-items: center;
 }
 
+#contact .contact-list > li img {
+  width: 120px;
+}
+
 #contact .contact-list > li .contact-title {
   display: flex;
   padding: 30px 9px;
@@ -702,6 +568,9 @@ button {
 }
 
 #contact .contact-list > li p:last-child {
+  font-family: 'Pretendard Variable', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
   display: flex;
   gap: 0px;
   color: #cd72fc;
@@ -711,7 +580,7 @@ button {
 
 /* footer */
 footer {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Pretendard Variable', sans-serif;
   text-align: center;
   padding: 40px;
   background-color: #000;
@@ -792,21 +661,12 @@ footer {
     width: 100%;
   }
   .card-detail {
-    padding: 20px 0px;
+    padding: 20px 40px;
   }
   .card-detail > ul {
     margin: 20px 0px;
   }
-  /* img-slider */
-  .img-slider-wrap {
-    width: 680px;
-  }
-  .img-description > ul > li {
-    margin: 10px 0;
-  }
-  .img-description > ul > li > p {
-    font-size: 1.65rem;
-  }
+
   /* shorts-tablet */
   /* 1. 기본 레이아웃 조정 */
   .short {
@@ -854,6 +714,13 @@ footer {
   #contact {
     margin: 100px 0px;
   }
+  #contact .contact-list {
+    gap: 100px;
+  }
+
+  #contact .contact-list > li img {
+    width: 100px;
+  }
   footer {
     padding-bottom: 40px;
   }
@@ -864,19 +731,26 @@ footer {
   :root {
     --card-width: 310px;
   }
-
   body {
     font-size: 1.4rem;
   }
   .center {
     width: initial;
-    padding: 8px 18px;
+    padding: 4px 10px;
+  }
+  header {
+    padding: 0;
   }
   .gnb > a {
     font-size: 1.4rem;
     margin-left: 10px;
   }
+  .logo {
+    width: 100px;
+  }
+
   #main-visual > video {
+    /* display: none; */
     top: 46px; /* 본인의 헤더 높이만큼 설정 */
   }
   .section-title {
@@ -890,13 +764,15 @@ footer {
     margin-bottom: 40px;
     text-align: center;
   }
-  #about {
-    margin-top: calc((100vw * 9 / 16) + 60px);
-    text-align: center;
+  #profile {
+    width: 95%;
+    padding: 0;
+    margin: 100px auto 0 auto;
   }
   .about-inner {
     display: block;
-    width: 80%;
+    width: 100%;
+    margin: 0;
   }
   .ab-img-wrap {
     width: 70%;
@@ -906,19 +782,35 @@ footer {
     width: 100%;
   }
   .ab-text-wrap {
-    width: 80%;
+    width: 100%;
     padding-left: 0;
-    margin: 28px auto 0 auto;
   }
   .ab-text-wrap > h4 {
+    text-align: center;
     font-size: 2.2rem;
+    letter-spacing: 70px;
+    margin-right: -70px;
   }
-  .ab-text-wrap > h5 {
-    font-size: 1.6rem;
-    margin: 24px 0px;
+  .ab-text-wrap .info {
+    display: block;
+    text-align: center;
   }
   .ab-text-wrap h5 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    /* background-color: aqua; */
+  }
+  .ab-text-wrap .spec {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .ab-text-wrap .spec li {
     font-size: 1.6rem;
+  }
+  .ab-text-wrap .spec span {
+    margin-top: 5px;
+    color: #ccc;
+    display: block;
   }
   #skill {
     margin: 100px 0px;
@@ -938,6 +830,8 @@ footer {
   }
   #skill > ul > li:last-child {
     margin-bottom: 0px;
+  }
+  #skill h6 > img {
   }
 
   /* slider-mobile */
