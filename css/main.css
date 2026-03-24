@@ -97,7 +97,8 @@ header {
   font-family: 'Fredoka', sans-serif;
   font-size: 5.5rem;
   font-weight: 800;
-  margin-bottom: 80px;
+  margin-top: 200px;
+  margin-bottom: 150px;
   text-align: center;
   color: #9aff01; /* 글자 내부 색상 */
   text-shadow:
@@ -584,6 +585,7 @@ button {
   gap: 0px;
   color: #cd72fc;
   padding: 0px 0px;
+  margin-top: -10px;
   letter-spacing: 1.5px;
 }
 
@@ -645,14 +647,18 @@ footer {
     width: 100%;
   }
   .ab-text-wrap {
-    padding-left: 6rem;
+    padding-left: 4rem;
   }
   .ab-text-wrap > h4 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
   .ab-text-wrap > h5 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
+  .ab-text-wrap .info {
+    letter-spacing: -1.7px;
+    width: 100%;
+}
   #skill {
     margin: 100px 0px;
   }
@@ -745,18 +751,20 @@ footer {
   }
   .center {
     width: initial;
-    padding: 4px 10px;
+    padding: 0px 0px;
   }
   header {
-    padding: 0;
+    padding: 0px;
   }
   .gnb > a {
-    font-size: 1.3rem;
-    margin-left: 10px;
+    font-size: 1.1rem;
+    margin-left: 1px;
+    margin-right: 13px;
   }
   .logo {
-    width: 85px;
+    width: 70px;
     margin-top: 5px;
+    margin-left: 10px;
   }
 
   #main-visual > video {
@@ -764,13 +772,13 @@ footer {
     top: 46px; /* 본인의 헤더 높이만큼 설정 */
   }
   .section-title {
-    font-size: 2.6rem;
+    font-size: 3.3rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 95px;
   }
   .section-sub-title {
     font-family: 'Prata', serif;
-    font-size: 2rem;
+    font-size: 20rem;
     margin-bottom: 40px;
     text-align: center;
   }
@@ -839,14 +847,18 @@ footer {
   }
   #skill > ul > li {
     width: 50%;
-    margin-bottom: 40px;
+    margin-bottom: 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  #skill > ul > li > ul > li{
+    font-size: 17px;
+    color: #cd72fc;
+  }
   #skill > ul > li:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 100px;
   }
   #skill > ul > li img {
     width: 80px;
@@ -938,7 +950,7 @@ footer {
     opacity: 1;
     top: auto;
     bottom: 0;
-    height: 10%;
+    height: 0%;
     background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
   }
@@ -966,20 +978,21 @@ footer {
 
   #contact .contact-list {
     display: block;
-    padding: 20px;
+    padding: 10px;
   }
   #contact .contact-list li {
-    padding: 20px 0;
+    padding: 50px 0;
   }
   #contact .contact-list li img {
-    width: 80px;
+    width: 70px;
   }
   #contact .contact-list > li .contact-title {
-    padding: 0;
-    padding-top: 10px;
+    padding: 10;
+    padding-top: 20px;
+    padding-bottom: 15px;
   }
   footer {
-    padding: 16px;
+    padding: 26px;
   }
   .btn-top {
     right: 20px;
